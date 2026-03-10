@@ -1,0 +1,121 @@
+<additionals>
+    <tlLogic id="301681267" type="actuated" programID="0" offset="3">
+        <phase duration="30" state="GGGr" minDur="10" maxDur="60"/>
+        <phase duration="3"  state="yyyr" minDur="3" maxDur="3"/>
+        <phase duration="1"  state="rrrr" minDur="1" maxDur="1"/>
+        <phase duration="20" state="rrrG" minDur="10" maxDur="40"/>
+        <phase duration="3"  state="rrry" minDur="3" maxDur="3"/>
+        <phase duration="1"  state="rrrr" minDur="1" maxDur="1"/>
+        <param key="255904385#0_0" value="e1_24"/>
+        <param key="942711932#0_0" value="e1_13"/>
+        <param key="942711932#0_1" value="e1_14"/>
+        <param key="942711932#0_2" value="e1_15"/>
+    </tlLogic>
+    <tlLogic id="4313891394" type="actuated" programID="0" offset="0">
+        <phase duration="90" state="GG" minDur="10" maxDur="100"/>
+    </tlLogic>
+    <tlLogic id="478544932" type="actuated" programID="0" offset="0">
+        <phase duration="82" state="GGGG" minDur="5" maxDur="50"/>
+        <phase duration="3"  state="yyyy"/>
+        <phase duration="5"  state="rrrr"/>
+        <param key="61316958_0" value="e1_9"/>
+        <param key="61316958_1" value="e1_10"/>
+        <param key="61316958_2" value="e1_11"/>
+        <param key="61316958_3" value="e1_12"/>
+    </tlLogic>
+    <tlLogic id="GS_1664172659" type="actuated" programID="0" offset="0">
+        <phase duration="42" state="GGrrr" minDur="5" maxDur="50"/>
+        <phase duration="3"  state="yyrrr"/>
+        <phase duration="1"  state="rrrrr" minDur="1" maxDur="1"/>
+        <phase duration="42" state="rrGGG" minDur="5" maxDur="50"/>
+        <phase duration="3"  state="rryyy"/>
+        <phase duration="1"  state="rrrrr" minDur="1" maxDur="1"/>
+        <param key="153776638#0.87_0" value="e1_8"/>
+        <param key="153776638#0.87_1" value="e1_7"/>
+        <param key="771467599#0_0" value="e1_4"/>
+        <param key="771467599#0_1" value="e1_5"/>
+        <param key="771467599#0_2" value="e1_6"/>
+    </tlLogic>
+    <tlLogic id="GS_1985727749" type="actuated" programID="0" offset="0">
+        <phase duration="42" state="Gr" minDur="5" maxDur="50"/>
+        <phase duration="3"  state="yr"/>
+        <phase duration="42" state="rG" minDur="5" maxDur="50"/>
+        <phase duration="3"  state="ry"/>
+        <param key="287956205_0" value="e1_21"/>
+        <param key="61295588#0_0" value="e1_25"/>
+    </tlLogic>
+    <tlLogic id="GS_280272723" type="actuated" programID="0" offset="0">
+        <phase duration="42" state="GGGGGrrrrrr" minDur="5" maxDur="50"/>
+        <phase duration="3"  state="yyyyyrrrrrr"/>
+        <phase duration="2"  state="rrrrrrrrrrr"/>
+        <phase duration="42" state="rrrrrGGGGGG" minDur="5" maxDur="50"/>
+        <phase duration="3"  state="rrrrryyyyyy"/>
+        <phase duration="2"  state="rrrrrrrrrrr"/>
+        <param key="236811149#0_0" value="e1_6"/>
+        <param key="236811149#0_1" value="e1_7"/>
+        <param key="236811149#0_2" value="e1_16"/>
+        <param key="236811149#0_3" value="e1_17"/>
+        <param key="236811149#0_4" value="e1_18"/>
+        <param key="287956206#2_0" value="e1_9"/>
+        <param key="287956206#2_1" value="e1_10"/>
+    </tlLogic>
+    <tlLogic id="J7" type="static" programID="0" offset="0">
+        <phase duration="27" state="GGrrrr"/>
+        <phase duration="3"  state="yyrrrr"/>
+        <phase duration="27" state="rrGGGr"/>
+        <phase duration="3"  state="rryyyr"/>
+        <phase duration="27" state="rrrrrG"/>
+        <phase duration="3"  state="rrrrry"/>
+    </tlLogic>
+    <tlLogic id="cluster1664172632_280272725" type="actuated" programID="0" offset="0">
+        <phase duration="42" state="GGrrrrr" minDur="5" maxDur="50"/>
+        <phase duration="3"  state="yyrrrrr"/>
+        <phase duration="1"  state="rrrrrrr"/>
+        <phase duration="41" state="rrGGGGG" minDur="5" maxDur="50"/>
+        <phase duration="3"  state="rryyyyy"/>
+        <param key="313992351#0_0" value="e1_23"/>
+        <param key="313992351#0_1" value="e1_22"/>
+    </tlLogic>
+    <tlLogic id="clusterJ9_cluster1664172634_8729417981" type="actuated" programID="0" offset="0">
+        <phase duration="42" state="GrG" minDur="5" maxDur="50"/>
+        <phase duration="3"  state="yry"/>
+        <phase duration="42" state="rGr" minDur="5" maxDur="50"/>
+        <phase duration="3"  state="ryr"/>
+        <param key="182045481#5_0" value="e1_21"/>
+        <param key="24811285#0_0" value="e1_19"/>
+    </tlLogic>
+    <tlLogic id="clustercluster1732884269_273653973_cluster_1923923897_2447939514" type="actuated" programID="0" offset="0">
+        <phase duration="23" state="ggGGGrrrrrrGGGGG" minDur="5" maxDur="50"/>
+        <phase duration="3"  state="ggGGyrrrrrryyyyy"/>
+        <phase duration="9"  state="GGGGrrrrrrrrrrrr" minDur="5" maxDur="50"/>
+        <phase duration="24" state="GGGGGrrrrrrGrrrr" minDur="5" maxDur="50"/>
+        <phase duration="3"  state="yyyyyrrrrrryrrrr"/>
+        <phase duration="24" state="rrrrrGgGGGGrrrrr" minDur="5" maxDur="50"/>
+        <phase duration="3"  state="rrrrryyyyyyrrrrr"/>
+        <phase duration="1"  state="rrrrrrrrrrrrrrrr"/>
+        <param key="161297931#0_0" value="e1_5"/>
+        <param key="161297931#0_1" value="e1_4"/>
+        <param key="182045481#4.51_0" value="e1_20"/>
+        <param key="187938710#0_0" value="e1_3"/>
+        <param key="187938710#0_1" value="e1_2"/>
+        <param key="187938710#0_2" value="e1_1"/>
+        <param key="187938710#0_3" value="e1_0"/>
+        <param key="24811285#2_0" value="e1_16"/>
+    </tlLogic>
+    <tlLogic id="clustercluster1923923898_26378754_cluster_1087952522_11804517184" type="actuated" programID="0" offset="0">
+        <phase duration="25" state="rrrGGGGGrr" minDur="5" maxDur="50"/>
+        <phase duration="3"  state="rrryyyyyrr"/>
+        <phase duration="1"  state="rrrrrrrrrr"/>
+        <phase duration="27" state="GrrrrrrrGG" minDur="5" maxDur="50"/>
+        <phase duration="3"  state="Grrrrrrryy"/>
+        <phase duration="27" state="GGGrrrrrrr" minDur="5" maxDur="50"/>
+        <phase duration="3"  state="yyyrrrrrrr"/>
+        <phase duration="1"  state="rrrrrrrrrr"/>
+        <param key="182045481#4.51_0" value="e1_20"/>
+        <param key="182045481#5_0" value="e1_21"/>
+        <param key="24811285#0_0" value="e1_19"/>
+        <param key="432309716#0_0" value="e1_8"/>
+        <param key="432309716#0_1" value="e1_6"/>
+    </tlLogic>
+
+</additionals>
