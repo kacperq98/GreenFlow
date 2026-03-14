@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-03-14 22:26:29.042351 by Eclipse SUMO randomTrips.py v1_26_0+0000-fa7df22d7f1
+<configuration>
+    <net-file value="C:\Users\breje\Desktop\projektKoncowy\simulation\network\osm.net.xml"/>
+    <additional-files value="C:\Users\breje\Desktop\projektKoncowy\simulation\demand\vtypes.add.xml"/>
+    <output-trip-file value="C:\Users\breje\Desktop\projektKoncowy\simulation\demand\tram_gdansk.trips.xml"/>
+    <route-file value="C:\Users\breje\Desktop\projektKoncowy\simulation\demand\tram_gdansk.rou.xml"/>
+    <prefix value="tram_gdansk_"/>
+    <trip-attributes value="type=&quot;tram_gdansk&quot;"/>
+    <lanes value="True"/>
+    <fringe-factor value="50.0"/>
+    <verbose value="True"/>
+    <period value="120.0"/>
+    <poisson value="True"/>
+</configuration>
+-->
+
+<!-- generated on 2026-03-14T22:26:28.974685+01:00 by Eclipse SUMO duarouter 1.26.0
+<duarouterConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\breje\Desktop\projektKoncowy\simulation\network\osm.net.xml"/>
+        <additional-files value="C:\Users\breje\Desktop\projektKoncowy\simulation\demand\vtypes.add.xml"/>
+        <route-files value="C:\Users\breje\Desktop\projektKoncowy\simulation\demand\tram_gdansk.trips.xml"/>
+    </input>
+
+    <output>
+        <output-file value="C:\Users\breje\Desktop\projektKoncowy\simulation\demand\tram_gdansk.rou.xml"/>
+        <alternatives-output value="NUL"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+    </time>
+
+    <report>
+        <verbose value="true"/>
+        <no-warnings value="true"/>
+        <ignore-errors value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+</duarouterConfiguration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+</routes>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-03-14T21:10:36.761521+01:00 by Eclipse SUMO GUI 1.26.0
+<!-- generated on 2026-03-14T22:42:44.530908+01:00 by Eclipse SUMO GUI 1.26.0
 <sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
         <net-file value="C:\Users\breje\Desktop\projektKoncowy\simulation\network/osm.net.xml"/>
-        <route-files value="C:\Users\breje\Desktop\projektKoncowy\simulation\demand/netedit_cfg.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\demand/osm_pt.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\demand/cars.rou.xml"/>
+        <route-files value="C:\Users\breje\Desktop\projektKoncowy\simulation\demand/netedit_cfg.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\             demand/osm_pt.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\             demand/cars_ev.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\             demand/cars.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\             demand/emergency.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\             demand/bus.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\             demand/truck.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\             demand/tram_gdansk.rou.xml"/>
         <additional-files value="C:\Users\breje\Desktop\projektKoncowy\simulation\osm.add.xml"/>
     </input>
 
@@ -17,10 +17,15 @@
 
     <processing>
         <lateral-resolution value="0.4"/>
+        <time-to-teleport value="-1"/>
     </processing>
 
 </sumoConfiguration>
 -->
 
 <detector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/det_e1_file.xsd">
+    <interval begin="0.00" end="300.00" id="e1_16" nVehContrib="17" flow="204.00" occupancy="2.28" speed="13.39" harmonicMeanSpeed="13.30" length="5.35" nVehEntered="17"/>
+    <interval begin="300.00" end="600.00" id="e1_16" nVehContrib="8" flow="96.00" occupancy="1.30" speed="14.03" harmonicMeanSpeed="13.99" length="5.75" nVehEntered="11"/>
+    <interval begin="600.00" end="900.00" id="e1_16" nVehContrib="12" flow="144.00" occupancy="2.12" speed="12.81" harmonicMeanSpeed="12.73" length="6.10" nVehEntered="15"/>
+    <interval begin="900.00" end="1023.00" id="e1_16" nVehContrib="6" flow="175.61" occupancy="2.26" speed="13.12" harmonicMeanSpeed="13.03" length="6.10" nVehEntered="6"/>
 </detector>

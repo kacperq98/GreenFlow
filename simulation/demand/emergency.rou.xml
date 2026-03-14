@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-03-14 22:20:02.089671 by Eclipse SUMO randomTrips.py v1_26_0+0000-fa7df22d7f1
+<configuration>
+    <net-file value="C:\Users\breje\Desktop\projektKoncowy\simulation\network\osm.net.xml"/>
+    <additional-files value="C:\Users\breje\Desktop\projektKoncowy\simulation\demand\vtypes.add.xml"/>
+    <output-trip-file value="C:\Users\breje\Desktop\projektKoncowy\simulation\demand\emergency.trips.xml"/>
+    <route-file value="C:\Users\breje\Desktop\projektKoncowy\simulation\demand\emergency.rou.xml"/>
+    <prefix value="emergency_"/>
+    <trip-attributes value="type=&quot;emergency&quot;"/>
+    <lanes value="True"/>
+    <fringe-factor value="50.0"/>
+    <verbose value="True"/>
+    <period value="900.0"/>
+    <poisson value="True"/>
+</configuration>
+-->
+
+<!-- generated on 2026-03-14T22:20:02.014624+01:00 by Eclipse SUMO duarouter 1.26.0
+<duarouterConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\breje\Desktop\projektKoncowy\simulation\network\osm.net.xml"/>
+        <additional-files value="C:\Users\breje\Desktop\projektKoncowy\simulation\demand\vtypes.add.xml"/>
+        <route-files value="C:\Users\breje\Desktop\projektKoncowy\simulation\demand\emergency.trips.xml"/>
+    </input>
+
+    <output>
+        <output-file value="C:\Users\breje\Desktop\projektKoncowy\simulation\demand\emergency.rou.xml"/>
+        <alternatives-output value="NUL"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+    </time>
+
+    <report>
+        <verbose value="true"/>
+        <no-warnings value="true"/>
+        <ignore-errors value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+</duarouterConfiguration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="emergency" length="5.50" maxSpeed="60.00" speedFactor="1.50" vClass="emergency" emissionClass="HBEFA3/PC_G_EU4" guiShape="emergency" color="red" accel="4.0" decel="6.0" sigma="0.2"/>
+    <vehicle id="emergency_0" type="emergency" depart="0.00">
+        <route edges="29114711#0.184 1362017843 1362017842.95 313992354#0 313992354#1 1362017841 313992351#0 287311357#0 27348585#0 61316915 187938712 287311363#0 1348067247 1348067246#0 287311364 236825277 -1316855122#3"/>
+    </vehicle>
+    <vehicle id="emergency_1" type="emergency" depart="900.00">
+        <route edges="200568455#0 227216231#0 236818215 236818214 161297931#0 432309716#0 287956206#2 1271126935 169400610#0 771467599#0 224821292#0 1147624737#0 1147624737#1"/>
+    </vehicle>
+    <vehicle id="emergency_2" type="emergency" depart="1800.00">
+        <route edges="61293002 61293002.258 236825276 291941452 942711943 1347887395 255904385#0 61316958 236818221#0 224821293#2 1232799370 1232799371#2 1232799371#4 277203712 236809165"/>
+    </vehicle>
+    <vehicle id="emergency_3" type="emergency" depart="2700.00">
+        <route edges="961539471 961539472 236811148 236811149#0 1451328237#0 E1 1323631883 430532793.85 430532793.85.34 430532793.85.34.10 -407552210#1"/>
+    </vehicle>
+</routes>

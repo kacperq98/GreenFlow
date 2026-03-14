@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
 
-<vType id="car" vClass="passenger" length="5.0" accel="2.6" decel="4.5" sigma="0.5" 
+<vType id="car" 
+        vClass="passenger" 
+        length="5.0" accel="2.6" decel="4.5" sigma="0.5" 
        maxSpeed="50.0" color="white" guiShape="passenger" 
        emissionClass="HBEFA3/PC_G_EU4"
-       laneChangeModel="LC2013"
+       laneChangeModel="SL2015"
        lcStrategic="1.0" 
        lcSpeedGain="1.0" 
        lcAssertive="1.0" 
-       lcCooperative="1.0" />
+       lcCooperative="2" />
 
     <vType id="car_ev" 
         vClass="passenger" 
@@ -22,6 +24,7 @@
         lcSpeedGain="3.5" 
         lcStrategic="0.5"
         lcAssertive="1.5" 
+        lcCooperative="2"
         emissionClass="Energy/unknown" />
     
     <vType id="motorcycle" 
@@ -36,6 +39,7 @@
         lcSpeedGain="3.8" 
         lcStrategic="0.5"  
         lcAssertive="1.5" 
+        lcCooperative="2"
         guiShape="motorcycle" 
         emissionClass="HBEFA3/PC_G_EU3" />
     
@@ -82,7 +86,7 @@
         sigma="0.1" 
         maxSpeed="19.4" 
         color="red" 
-        guiShape="tram"
+        guiShape="rail/railcar"
         emissionClass="Energy/unknown" />
 
 </additional>

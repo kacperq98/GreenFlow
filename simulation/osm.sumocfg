@@ -7,7 +7,15 @@
 
     <input>
         <net-file value="network/osm.net.xml"/>
-        <route-files value="demand/netedit_cfg.rou.xml,demand/osm_pt.rou.xml,demand/cars.rou.xml"/>
+        <route-files value="demand/netedit_cfg.rou.xml,
+            demand/osm_pt.rou.xml,
+            demand/cars_ev.rou.xml,
+            demand/cars.rou.xml,
+            demand/emergency.rou.xml,
+            demand/bus.rou.xml,
+            demand/truck.rou.xml,
+            demand/tram_gdansk.rou.xml"
+            />
         <additional-files value="osm.add.xml"/>
     </input>
 
@@ -19,6 +27,8 @@
 
     <processing>
         <lateral-resolution value="0.4"/>
+        <time-to-teleport value="-1"/>
     </processing>
 
 </sumoConfiguration>
+ 
