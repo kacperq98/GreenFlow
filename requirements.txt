@@ -1,0 +1,8 @@
+eclipse-sumo>=1.26.0
+traci>=1.26.0
+sumolib>=1.26.0
+gymnasium>=1.2.3
+stable-baselines3>=2.7.1
+numpy>=2.2.6
+torch>=2.10.0
+tensorboard>=2.20.0
