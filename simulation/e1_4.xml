@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-03-14T22:42:44.535657+01:00 by Eclipse SUMO GUI 1.26.0
+<!-- generated on 2026-03-15T19:07:35.054698+01:00 by Eclipse SUMO GUI 1.26.0
 <sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
         <net-file value="C:\Users\breje\Desktop\projektKoncowy\simulation\network/osm.net.xml"/>
-        <route-files value="C:\Users\breje\Desktop\projektKoncowy\simulation\demand/netedit_cfg.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\             demand/osm_pt.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\             demand/cars_ev.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\             demand/cars.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\             demand/emergency.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\             demand/bus.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\             demand/truck.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\             demand/tram_gdansk.rou.xml"/>
+        <route-files value="C:\Users\breje\Desktop\projektKoncowy\simulation\demand/netedit_cfg.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\demand/car_ev.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\demand/car.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\demand/emergency.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\demand/motorcycle.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\demand/bus.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\demand/tram.rou.xml,C:\Users\breje\Desktop\projektKoncowy\simulation\demand/truck.rou.xml"/>
         <additional-files value="C:\Users\breje\Desktop\projektKoncowy\simulation\osm.add.xml"/>
     </input>
 
@@ -13,19 +13,31 @@
         <summary-output value="C:\Users\breje\Desktop\projektKoncowy\simulation\results/stats.xml"/>
         <tripinfo-output value="C:\Users\breje\Desktop\projektKoncowy\simulation\results/tripinfos.xml"/>
         <stop-output value="C:\Users\breje\Desktop\projektKoncowy\simulation\results/stopinfos.xml"/>
+        <statistic-output value="C:\Users\breje\Desktop\projektKoncowy\simulation\results/baseline_statistics.xml"/>
     </output>
 
     <processing>
         <lateral-resolution value="0.4"/>
-        <time-to-teleport value="-1"/>
+        <time-to-teleport value="150"/>
     </processing>
 
 </sumoConfiguration>
 -->
 
 <detector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/det_e1_file.xsd">
-    <interval begin="0.00" end="300.00" id="e1_4" nVehContrib="18" flow="216.00" occupancy="4.46" speed="9.99" harmonicMeanSpeed="6.84" length="4.92" nVehEntered="20"/>
-    <interval begin="300.00" end="600.00" id="e1_4" nVehContrib="5" flow="60.00" occupancy="3.87" speed="3.72" harmonicMeanSpeed="2.40" length="4.92" nVehEntered="7"/>
-    <interval begin="600.00" end="900.00" id="e1_4" nVehContrib="7" flow="84.00" occupancy="2.45" speed="8.21" harmonicMeanSpeed="6.54" length="4.86" nVehEntered="8"/>
-    <interval begin="900.00" end="1023.00" id="e1_4" nVehContrib="4" flow="117.07" occupancy="2.52" speed="9.09" harmonicMeanSpeed="8.98" length="6.70" nVehEntered="4"/>
+    <interval begin="0.00" end="300.00" id="e1_4" nVehContrib="0" flow="0.00" occupancy="0.00" speed="-1.00" harmonicMeanSpeed="-1.00" length="-1.00" nVehEntered="0"/>
+    <interval begin="300.00" end="600.00" id="e1_4" nVehContrib="3" flow="36.00" occupancy="0.83" speed="6.39" harmonicMeanSpeed="6.05" length="5.00" nVehEntered="3"/>
+    <interval begin="600.00" end="900.00" id="e1_4" nVehContrib="2" flow="24.00" occupancy="0.52" speed="6.76" harmonicMeanSpeed="6.43" length="5.00" nVehEntered="2"/>
+    <interval begin="900.00" end="1200.00" id="e1_4" nVehContrib="3" flow="36.00" occupancy="1.41" speed="8.13" harmonicMeanSpeed="6.25" length="7.27" nVehEntered="3"/>
+    <interval begin="1200.00" end="1500.00" id="e1_4" nVehContrib="3" flow="36.00" occupancy="0.83" speed="6.22" harmonicMeanSpeed="6.02" length="5.00" nVehEntered="3"/>
+    <interval begin="1500.00" end="1800.00" id="e1_4" nVehContrib="0" flow="0.00" occupancy="0.00" speed="-1.00" harmonicMeanSpeed="-1.00" length="-1.00" nVehEntered="0"/>
+    <interval begin="1800.00" end="2100.00" id="e1_4" nVehContrib="2" flow="24.00" occupancy="0.88" speed="7.95" harmonicMeanSpeed="7.94" length="5.00" nVehEntered="4"/>
+    <interval begin="2100.00" end="2400.00" id="e1_4" nVehContrib="3" flow="36.00" occupancy="1.80" speed="5.26" harmonicMeanSpeed="4.75" length="4.87" nVehEntered="6"/>
+    <interval begin="2400.00" end="2700.00" id="e1_4" nVehContrib="3" flow="36.00" occupancy="0.74" speed="7.07" harmonicMeanSpeed="6.75" length="5.00" nVehEntered="3"/>
+    <interval begin="2700.00" end="3000.00" id="e1_4" nVehContrib="1" flow="12.00" occupancy="0.23" speed="7.14" harmonicMeanSpeed="7.14" length="5.00" nVehEntered="1"/>
+    <interval begin="3000.00" end="3300.00" id="e1_4" nVehContrib="2" flow="24.00" occupancy="0.47" speed="7.07" harmonicMeanSpeed="7.06" length="5.00" nVehEntered="2"/>
+    <interval begin="3300.00" end="3600.00" id="e1_4" nVehContrib="1" flow="12.00" occupancy="0.43" speed="9.70" harmonicMeanSpeed="9.70" length="5.00" nVehEntered="2"/>
+    <interval begin="3600.00" end="3900.00" id="e1_4" nVehContrib="0" flow="0.00" occupancy="0.00" speed="-1.00" harmonicMeanSpeed="-1.00" length="-1.00" nVehEntered="0"/>
+    <interval begin="3900.00" end="4200.00" id="e1_4" nVehContrib="0" flow="0.00" occupancy="0.00" speed="-1.00" harmonicMeanSpeed="-1.00" length="-1.00" nVehEntered="0"/>
+    <interval begin="4200.00" end="4343.00" id="e1_4" nVehContrib="0" flow="0.00" occupancy="0.00" speed="-1.00" harmonicMeanSpeed="-1.00" length="-1.00" nVehEntered="0"/>
 </detector>

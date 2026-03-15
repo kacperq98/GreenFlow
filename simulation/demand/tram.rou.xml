@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-03-15 19:03:48.204788 by Eclipse SUMO randomTrips.py v1_26_0+0000-fa7df22d7f1
+<configuration>
+    <net-file value="network\osm.net.xml"/>
+    <additional-files value="demand\vtypes.add.xml"/>
+    <output-trip-file value="demand\tram.trips.xml"/>
+    <route-file value="demand\tram.rou.xml"/>
+    <prefix value="tram_"/>
+    <trip-attributes value="type='tram_gdansk'"/>
+    <lanes value="True"/>
+    <fringe-factor value="5.0"/>
+    <edge-permission value="tram"/>
+    <period value="180.0"/>
+    <poisson value="True"/>
+</configuration>
+-->
+
+<!-- generated on 2026-03-15T19:03:48.141515+01:00 by Eclipse SUMO duarouter 1.26.0
+<duarouterConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="network\osm.net.xml"/>
+        <additional-files value="demand\vtypes.add.xml"/>
+        <route-files value="demand\tram.trips.xml"/>
+    </input>
+
+    <output>
+        <output-file value="demand\tram.rou.xml"/>
+        <alternatives-output value="NUL"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="3600.0"/>
+    </time>
+
+    <report>
+        <no-warnings value="true"/>
+        <ignore-errors value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+</duarouterConfiguration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vType id="tram_gdansk" length="30.00" maxSpeed="19.40" vClass="tram" emissionClass="Energy/default" guiShape="rail/railcar" width="2.40" color="red" accel="1.0" decel="2.8" sigma="0.1"/>
+    <vehicle id="tram_0" type="tram_gdansk" depart="0.00">
+        <route edges="182045481#4.51 182045481#5 182045481#7"/>
+    </vehicle>
+    <vehicle id="tram_1" type="tram_gdansk" depart="180.00">
+        <route edges="24811285#0 24811285#2 24811285#3"/>
+    </vehicle>
+    <vehicle id="tram_2" type="tram_gdansk" depart="360.00">
+        <route edges="182045481#5"/>
+    </vehicle>
+    <vehicle id="tram_3" type="tram_gdansk" depart="540.00">
+        <route edges="182045481#4.51 182045481#5 182045481#7"/>
+    </vehicle>
+    <vehicle id="tram_4" type="tram_gdansk" depart="720.00">
+        <route edges="24811285#0 24811285#2 24811285#3"/>
+    </vehicle>
+    <vehicle id="tram_5" type="tram_gdansk" depart="900.00">
+        <route edges="24811285#0 24811285#2 24811285#3"/>
+    </vehicle>
+    <vehicle id="tram_6" type="tram_gdansk" depart="1080.00">
+        <route edges="182045481#4.51 182045481#5 182045481#7"/>
+    </vehicle>
+    <vehicle id="tram_7" type="tram_gdansk" depart="1260.00">
+        <route edges="182045481#4.51 182045481#5 182045481#7"/>
+    </vehicle>
+    <vehicle id="tram_8" type="tram_gdansk" depart="1440.00">
+        <route edges="24811285#2 24811285#3"/>
+    </vehicle>
+    <vehicle id="tram_9" type="tram_gdansk" depart="1620.00">
+        <route edges="24811285#0 24811285#2 24811285#3"/>
+    </vehicle>
+    <vehicle id="tram_10" type="tram_gdansk" depart="1800.00">
+        <route edges="24811285#0 24811285#2 24811285#3"/>
+    </vehicle>
+    <vehicle id="tram_11" type="tram_gdansk" depart="1980.00">
+        <route edges="24811285#2 24811285#3"/>
+    </vehicle>
+    <vehicle id="tram_12" type="tram_gdansk" depart="2160.00">
+        <route edges="182045481#4.51 182045481#5 182045481#7"/>
+    </vehicle>
+    <vehicle id="tram_13" type="tram_gdansk" depart="2340.00">
+        <route edges="182045481#4.51 182045481#5 182045481#7"/>
+    </vehicle>
+    <vehicle id="tram_14" type="tram_gdansk" depart="2520.00">
+        <route edges="182045481#4.51 182045481#5 182045481#7"/>
+    </vehicle>
+    <vehicle id="tram_15" type="tram_gdansk" depart="2700.00">
+        <route edges="182045481#4.51 182045481#5 182045481#7"/>
+    </vehicle>
+    <vehicle id="tram_16" type="tram_gdansk" depart="2880.00">
+        <route edges="24811285#0 24811285#2 24811285#3"/>
+    </vehicle>
+    <vehicle id="tram_17" type="tram_gdansk" depart="3060.00">
+        <route edges="182045481#4.51 182045481#5 182045481#7"/>
+    </vehicle>
+    <vehicle id="tram_18" type="tram_gdansk" depart="3240.00">
+        <route edges="24811285#0 24811285#2 24811285#3"/>
+    </vehicle>
+    <vehicle id="tram_19" type="tram_gdansk" depart="3420.00">
+        <route edges="24811285#0 24811285#2 24811285#3"/>
+    </vehicle>
+</routes>

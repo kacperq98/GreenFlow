@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-03-15T09:58:49.790929+01:00 by Eclipse SUMO netedit 1.26.0
+<!-- generated on 2026-03-15T18:52:26.658438+01:00 by Eclipse SUMO netedit 1.26.0
 -->
 
 <additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
@@ -19,23 +19,20 @@
     <inductionLoop id="e1_12" lane="153776638#0_0" pos="0.00" period="300.00" file="e1_12.xml"/>
     <inductionLoop id="e1_13" lane="24811285#0_0" pos="961.38" period="300.00" file="e1_13.xml"/>
     <inductionLoop id="e1_14" lane="182045481#4.51_0" pos="551.04" period="300.00" file="e1_14.xml"/>
-    <inductionLoop id="e1_15" lane="187938710#0_0" pos="28.78" period="300.00" file="e1_15.xml"/>
-    <inductionLoop id="e1_16" lane="187938710#0_1" pos="28.71" period="300.00" file="e1_16.xml"/>
-    <inductionLoop id="e1_17" lane="187938710#0_2" pos="28.63" period="300.00" file="e1_17.xml"/>
-    <inductionLoop id="e1_18" lane="187938710#0_3" pos="28.54" period="300.00" file="e1_18.xml"/>
-    <inductionLoop id="e1_19" lane="161297931#0_0" pos="35.10" period="300.00" file="e1_19.xml"/>
+    <inductionLoop id="e1_15" lane="187938710#0_0" pos="48.23" period="300.00" file="e1_15.xml"/>
+    <inductionLoop id="e1_16" lane="187938710#0_1" pos="48.14" period="300.00" file="e1_16.xml"/>
+    <inductionLoop id="e1_17" lane="187938710#0_2" pos="48.04" period="300.00" file="e1_17.xml"/>
+    <inductionLoop id="e1_18" lane="187938710#0_3" pos="47.92" period="300.00" file="e1_18.xml"/>
+    <inductionLoop id="e1_19" lane="161297931#0_0" pos="56.29" period="300.00" file="e1_19.xml"/>
     <inductionLoop id="e1_2" lane="236811148_2" pos="0.00" period="300.00" file="e1_2.xml"/>
-    <inductionLoop id="e1_20" lane="161297931#0_1" pos="35.76" period="300.00" file="e1_20.xml"/>
+    <inductionLoop id="e1_20" lane="161297931#0_1" pos="56.73" period="300.00" file="e1_20.xml"/>
     <inductionLoop id="e1_21" lane="29092803_0" pos="0.00" period="300.00" file="e1_21.xml"/>
     <inductionLoop id="e1_22" lane="1347887395_0" pos="112.81" period="300.00" file="e1_22.xml"/>
-    <inductionLoop id="e1_23" lane="771467599#0_0" pos="0.09" period="300.00" file="e1_23.xml"/>
-    <inductionLoop id="e1_24" lane="771467599#0_1" pos="0.06" period="300.00" file="e1_24.xml"/>
-    <inductionLoop id="e1_25" lane="771467599#0_2" pos="0.03" period="300.00" file="e1_25.xml"/>
     <inductionLoop id="e1_3" lane="236811148_4" pos="0.01" period="300.00" file="e1_3.xml"/>
     <inductionLoop id="e1_4" lane="236811148_1" pos="0.00" period="300.00" file="e1_4.xml"/>
     <inductionLoop id="e1_5" lane="236811148_5" pos="0.00" period="300.00" file="e1_5.xml"/>
-    <inductionLoop id="e1_6" lane="61316958_0" pos="13.71" period="300.00" file="e1_6.xml"/>
-    <inductionLoop id="e1_7" lane="61316958_1" pos="13.77" period="300.00" file="e1_7.xml"/>
-    <inductionLoop id="e1_8" lane="61316958_2" pos="13.81" period="300.00" file="e1_8.xml"/>
-    <inductionLoop id="e1_9" lane="61316958_3" pos="13.60" period="300.00" file="e1_9.xml"/>
+    <inductionLoop id="e1_6" lane="61316958_0" pos="41.69" period="300.00" file="e1_6.xml"/>
+    <inductionLoop id="e1_7" lane="61316958_1" pos="41.74" period="300.00" file="e1_7.xml"/>
+    <inductionLoop id="e1_8" lane="61316958_2" pos="41.87" period="300.00" file="e1_8.xml"/>
+    <inductionLoop id="e1_9" lane="61316958_3" pos="41.98" period="300.00" file="e1_9.xml"/>
 </additional>

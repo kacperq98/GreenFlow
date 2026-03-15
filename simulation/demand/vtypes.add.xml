@@ -76,10 +76,11 @@
         speedFactor="1.5" 
         color="red" 
         guiShape="emergency" 
-        emissionClass="HBEFA3/PC_G_EU4"
-        <param key="has.bluelight.device" value="true"/>/>
+        emissionClass="HBEFA3/PC_G_EU4">
+        <param key="has.bluelight.device" value="true"/>
+    </vType>
 
-        <vType id="tram_gdansk" 
+    <vType id="tram_gdansk" 
         vClass="tram" 
         length="30.0" 
         width="2.4"
@@ -89,6 +90,6 @@
         maxSpeed="19.4" 
         color="red" 
         guiShape="rail/railcar"
-        emissionClass="Energy/unknown" />
+        emissionClass="Energy/unknown"/>
 
 </additional>
