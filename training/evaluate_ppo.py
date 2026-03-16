@@ -74,7 +74,7 @@ def evaluate_agent(model_name: str, episodes: int, use_gui: bool, seed: int = No
 def evaluate_baseline(episodes: int, cycle_steps: int = 12, seed: int = None) -> float:
     env = BaltyckaIntersectionEnv(use_gui=False, seed=seed)
 
-    def action_fn(__obs):
+    def action_fn(obs):
         return 1 if env._step_count % cycle_steps == 0 and env._step_count > 0 else 0
 
     rewards, haltings = [], []
