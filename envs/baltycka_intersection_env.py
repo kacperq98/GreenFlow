@@ -143,6 +143,8 @@ class BaltyckaIntersectionEnv(gym.Env):
             '-c', os.path.abspath(SUMOCFG_PATH),
             '--no-warnings',
             '--no-step-log',
+            '--collision.action', 'remove',
+            '--ignore-route-errors',
         ]
         seed = self._seed if self._seed is not None else random.randint(0, 2**31 - 1)  # seed is a 32-bit signed integer
         sumo_cmd += ['--seed', str(seed)]
