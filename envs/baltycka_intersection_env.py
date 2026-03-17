@@ -32,7 +32,6 @@ YELLOW_TIME = 3                    # seconds spent in yellow phase during phase 
 MIN_GREEN_TIME = 10                # minimum seconds before a phase switch is allowed (to avoid phase flickering)
 DELTA_TIME = 5                     # simulation seconds per agent step
 EPISODE_STEPS = 720                # max steps per episode (720 × 5s = 3600s = 1 simulated hour)
-MAX_HALTING = 50                   # normalization cap for halting vehicles per lane
 MAX_PHASE_DURATION = 90            # normalization cap for elapsed phase time
 PHASE_LOCK_DURATION = 1_000_000    # large value to prevent SUMO from advancing phase automatically
 
@@ -42,7 +41,7 @@ class BaltyckaIntersectionEnv(gym.Env):
     RL environment for the Galeria Bałtycka intersection in Gdańsk.
 
     Observations (21):
-        [0:13]  halting vehicles per detector lane, normalized to [0, 1]
+        [0:13]  halting vehicles per detector lane, normalized by lane length
         [13:24] one-hot encoding of current green phase (for NUM_GREEN_PHASES = 11)
         [24]    elapsed time in current phase, normalized to [0, 1]
 
@@ -71,6 +70,7 @@ class BaltyckaIntersectionEnv(gym.Env):
         self._green_timer: int = 0
         self._step_count: int = 0
         self._prev_waiting_time: float = 0.0
+        self._lane_lengths: list[float] = []
 
         self.action_space = gym.spaces.Discrete(2)
         self.observation_space = gym.spaces.Box(
@@ -161,6 +161,7 @@ class BaltyckaIntersectionEnv(gym.Env):
             f'Update NUM_GREEN_PHASES constant.'
         )
         self._yellow_phases = self._detect_yellow_phases(phases)
+        self._lane_lengths = [traci.lane.getLength(lane) for lane in DETECTOR_LANES]
 
     def _set_phase(self, phase_idx: int):
         traci.trafficlight.setPhase(TL_ID, phase_idx)
@@ -193,7 +194,7 @@ class BaltyckaIntersectionEnv(gym.Env):
             [traci.lane.getLastStepHaltingNumber(lane) for lane in DETECTOR_LANES],
             dtype=np.float32,
         )
-        halting_norm = np.clip(halting / MAX_HALTING, 0.0, 1.0)
+        halting_norm = np.clip(halting / self._lane_lengths, 0.0, 1.0)
         phase_one_hot = np.zeros(NUM_GREEN_PHASES, dtype=np.float32)
         phase_one_hot[self._current_green_idx] = 1.0
         elapsed_norm = np.array([min(self._green_timer / MAX_PHASE_DURATION, 1.0)], dtype=np.float32)
