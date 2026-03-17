@@ -51,7 +51,8 @@ class BaltyckaIntersectionEnv(gym.Env):
         1 — change phase (ignored if elapsed time < MIN_GREEN_TIME)
 
     Reward:
-        negative sum of halting vehicles across all detector lanes
+        diff-waiting-time: reduction in total waiting time since last step
+        positive when waiting time decreases, negative when it increases
     """
 
     metadata = {'render_modes': ['human']}
@@ -69,6 +70,7 @@ class BaltyckaIntersectionEnv(gym.Env):
         self._current_green_idx: int = 0
         self._green_timer: int = 0
         self._step_count: int = 0
+        self._prev_waiting_time: float = 0.0
 
         self.action_space = gym.spaces.Discrete(2)
         self.observation_space = gym.spaces.Box(
@@ -98,6 +100,7 @@ class BaltyckaIntersectionEnv(gym.Env):
         self._current_green_idx = 0
         self._green_timer = 0
         self._step_count = 0
+        self._prev_waiting_time = 0.0
         self._set_phase(self._green_phases[0])  # start with the first green phase
 
         return self._get_observations(), {}  # return (obs, info)
@@ -116,9 +119,10 @@ class BaltyckaIntersectionEnv(gym.Env):
         reward = self._get_reward()
         terminated = traci.simulation.getMinExpectedNumber() <= 0
         truncated = self._step_count >= EPISODE_STEPS
+        total_halting = sum(traci.lane.getLastStepHaltingNumber(lane) for lane in DETECTOR_LANES)
         info = {
             'sim_time': traci.simulation.getTime(),
-            'total_halting': -reward,
+            'total_halting': total_halting,
         }
 
         return obs, reward, terminated, truncated, info
@@ -196,6 +200,7 @@ class BaltyckaIntersectionEnv(gym.Env):
         return np.concatenate([halting_norm, phase_one_hot, elapsed_norm])
 
     def _get_reward(self) -> float:
-        return -float(sum(
-            traci.lane.getLastStepHaltingNumber(lane) for lane in DETECTOR_LANES
-        ))
+        current_waiting = sum(traci.lane.getWaitingTime(lane) for lane in DETECTOR_LANES)
+        reward = self._prev_waiting_time - current_waiting
+        self._prev_waiting_time = current_waiting
+        return reward
