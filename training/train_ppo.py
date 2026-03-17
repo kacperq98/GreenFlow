@@ -39,6 +39,7 @@ def train(model_name: str, total_timesteps: int):
         env=env,
         verbose=1,
         tensorboard_log=LOGS_DIR,
+        ent_coef=0.05,
     )
 
     model.learn(total_timesteps=total_timesteps)
