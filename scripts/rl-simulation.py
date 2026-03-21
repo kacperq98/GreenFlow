@@ -1,7 +1,8 @@
 import os
 import sys
 from stable_baselines3 import PPO
-from sumo_rl import SumoEnvironment
+from stable_baselines3.common.callbacks import EvalCallback
+from sumo_rl import SumoEnvironment, env
 
 #sumo-rl documentation: https://lucasalegre.github.io/sumo-rl/
 
@@ -26,7 +27,7 @@ def environment_setup():
         net_file='../simulation/network/osm.net.xml',  # Net file
         route_file=route_files,
         out_csv_name='../models/ppo_single_agent',
-        additional_sumo_cmd="--collision.action remove --ignore-route-errors",
+        additional_sumo_cmd="--collision.action remove --ignore-route-errors ",
         single_agent=True,
         ts_ids =['Glowny_wezel'],
         use_gui=False,
@@ -47,15 +48,14 @@ def create_model(env):
         n_steps=2048,
         batch_size=128,
         device='auto',
-        policy_kwargs=dict(net_arch=[256, 256, 128]),
+        policy_kwargs=dict(net_arch=[256, 128, 64]),
         tensorboard_log="../models/ppo_traffic_tensorboard/")
     
     return model
 
-def model_learn(model):
-
-    model.learn(total_timesteps=200_000)
-    print("Trening finished!")
+def model_learn(model, callback=None):
+    model.learn(total_timesteps=100_000, callback=callback)
+    print("Training finished!")
 
 
 def model_save(model):
@@ -65,13 +65,28 @@ def model_save(model):
 def close_environment(env):
     env.close()
 
+def evaluate_model(eval_env):
+    eval_callback = EvalCallback(
+            eval_env, 
+            best_model_save_path='../models/best_model/',
+            log_path='../models/ppo_traffic_tensorboard/eval_logs/', 
+            eval_freq=5_000, 
+            deterministic=True, 
+            render=False)
+    return eval_callback, eval_env
+
 def main():
     check_sumo_home()
-    env = environment_setup()
-    model = create_model(env)
-    model_learn(model)
+    training_env = environment_setup()
+    eval_env = environment_setup()
+    model = create_model(training_env)
+
+    eval_callback, eval_env = evaluate_model(eval_env)
+    model_learn(model, callback=eval_callback)
+    
     model_save(model)
-    close_environment(env)
+    close_environment(training_env)
+    close_environment(eval_env)
 
 if __name__ == "__main__":
     main()
