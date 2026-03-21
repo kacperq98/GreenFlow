@@ -13,6 +13,8 @@ venv/
 results/
 scripts/sumo_errors.txt
 scripts/sumo_log.txt
+*.trips.xml
+simulation/e1*.xml
 
 # Backups files
 *.xml.bak
