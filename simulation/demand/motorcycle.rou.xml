@@ -1,51 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-03-20 11:48:08.634573 by Eclipse SUMO randomTrips.py v1_26_0+0000-fa7df22d7f1
-<configuration>
-    <net-file value="network\osm.net.xml"/>
-    <additional-files value="demand\vtypes.add.xml"/>
-    <output-trip-file value="demand\motorcycle.trips.xml"/>
-    <route-file value="demand\motorcycle.rou.xml"/>
-    <prefix value="motorcycle_"/>
-    <trip-attributes value="type='motorcycle'"/>
-    <lanes value="True"/>
-    <fringe-factor value="5.0"/>
-    <edge-permission value="motorcycle"/>
-    <period value="120.0"/>
-    <poisson value="True"/>
-</configuration>
--->
-
-<!-- generated on 2026-03-20T11:48:08.562664+01:00 by Eclipse SUMO duarouter 1.26.0
-<duarouterConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
-
-    <input>
-        <net-file value="network\osm.net.xml"/>
-        <additional-files value="demand\vtypes.add.xml"/>
-        <route-files value="demand\motorcycle.trips.xml"/>
-    </input>
-
-    <output>
-        <output-file value="demand\motorcycle.rou.xml"/>
-        <alternatives-output value="NUL"/>
-    </output>
-
-    <time>
-        <begin value="0"/>
-        <end value="3600.0"/>
-    </time>
-
-    <report>
-        <no-warnings value="true"/>
-        <ignore-errors value="true"/>
-        <no-step-log value="true"/>
-    </report>
-
-</duarouterConfiguration>
+<!-- generated on 2026-03-22T15:46:39.370060+01:00 by Eclipse SUMO netedit 1.26.0
 -->
 
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- VTypes -->
     <vType id="motorcycle" length="2.20" maxSpeed="13.89" vClass="motorcycle" emissionClass="HBEFA3/PC_G_EU3" guiShape="motorcycle" width="0.90" color="yellow" lcStrategic="0.5" lcCooperative="1.2" lcSpeedGain="3.8" lcAssertive="1.5" accel="5.0" decel="7.0" sigma="0.7"/>
+    <!-- Vehicles, persons and containers (sorted by depart) -->
     <vehicle id="motorcycle_0" type="motorcycle" depart="0.00">
         <route edges="287311357#0 27348585#0 61316915 187938712 287311363#0 1348067247 1348067246#0 287311364 27476746 291941452 291941449 1232964862 27476764#0 -1348067248"/>
     </vehicle>

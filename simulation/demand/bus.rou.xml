@@ -1,51 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-03-20 11:48:07.351439 by Eclipse SUMO randomTrips.py v1_26_0+0000-fa7df22d7f1
-<configuration>
-    <net-file value="network\osm.net.xml"/>
-    <additional-files value="demand\vtypes.add.xml"/>
-    <output-trip-file value="demand\bus.trips.xml"/>
-    <route-file value="demand\bus.rou.xml"/>
-    <prefix value="bus_"/>
-    <trip-attributes value="type='bus'"/>
-    <lanes value="True"/>
-    <fringe-factor value="5.0"/>
-    <edge-permission value="bus"/>
-    <period value="50.0"/>
-    <poisson value="True"/>
-</configuration>
--->
-
-<!-- generated on 2026-03-20T11:48:07.277560+01:00 by Eclipse SUMO duarouter 1.26.0
-<duarouterConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
-
-    <input>
-        <net-file value="network\osm.net.xml"/>
-        <additional-files value="demand\vtypes.add.xml"/>
-        <route-files value="demand\bus.trips.xml"/>
-    </input>
-
-    <output>
-        <output-file value="demand\bus.rou.xml"/>
-        <alternatives-output value="NUL"/>
-    </output>
-
-    <time>
-        <begin value="0"/>
-        <end value="3600.0"/>
-    </time>
-
-    <report>
-        <no-warnings value="true"/>
-        <ignore-errors value="true"/>
-        <no-step-log value="true"/>
-    </report>
-
-</duarouterConfiguration>
+<!-- generated on 2026-03-22T15:46:39.371970+01:00 by Eclipse SUMO netedit 1.26.0
 -->
 
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- VTypes -->
     <vType id="bus" length="12.00" maxSpeed="13.89" vClass="bus" emissionClass="HBEFA3/HDV_D_EU4" guiShape="bus" color="orange" lcStrategic="0.5" lcCooperative="1" lcSpeedGain="3.8" lcAssertive="1.5" accel="1.2" decel="4.0" sigma="0.4"/>
+    <!-- Vehicles, persons and containers (sorted by depart) -->
     <vehicle id="bus_0" type="bus" depart="0.00">
         <route edges="287311363#0 1348067247 1348067246#0 287311364 27476746 291941452 291941449 1232964862 27476764#0 -1348067248"/>
     </vehicle>
