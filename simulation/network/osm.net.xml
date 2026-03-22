@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-03-20T09:32:14.357571+01:00 by Eclipse SUMO netedit 1.26.0
+<!-- generated on 2026-03-22T15:46:38.986916+01:00 by Eclipse SUMO netedit 1.26.0
 <neteditConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
 
     <input>
@@ -1344,18 +1344,17 @@
     </tlLogic>
     <tlLogic id="Glowny_wezel" type="static" programID="0" offset="0">
         <phase duration="50" state="rrrrrGGGGGGrrrrGGGrrGGGGGGGGrrrrrrGrrGGGrrGrGrr"/>
-        <phase duration="3"  state="rrrrryyyyyyrrrryyyrrgyyyyyyyrrrrrryrrGGGrryryrr"/>
-        <phase duration="2"  state="rrrrrrrrrrrrrrrrrrrrgrrrrrryrrrrrryrrGGGrryryrr"/>
-        <phase duration="1"  state="rrrrrrrrrrrrrrrrrrrrgrrrrrrrrrrrrrrrrGGGrrrrrrr"/>
+        <phase duration="3"  state="rrrrryyyyyyrrrryyyrryyyyyyyyrrrrrryrryyyrryryrr"/>
+        <phase duration="2"  state="rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"/>
         <phase duration="50" state="GGGGGrrrrrrGGGGrrrrrgrrrrrrrGgGGGGrrrGGGGGrrrrr"/>
-        <phase duration="3"  state="GGGGGrrrrrryyyyrrrrryrrrrrrrGgGGGGrrrGGGGGrrrrr"/>
-        <phase duration="1"  state="GGGGGrrrrrrrrrrrrrrrrrrrrrrrGgGGGGrrrGGGGGrrrrr"/>
+        <phase duration="3"  state="yyyyyrrrrrryyyyrrrrryrrrrrrryyyyyyrrryyyyyrrrrr"/>
+        <phase duration="2"  state="rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"/>
         <phase duration="50" state="GGGGGrrrrrrrrrrGGGGGrrrrrrrrGGGGGGrrrGGGGGrrrrr"/>
-        <phase duration="3"  state="GGGGGrrrrrrrrrrGGGGGrrrrrrrryyyyyyrrryyyyyrrrrr"/>
-        <phase duration="1"  state="GGGGGrrrrrrrrrrGGGGGrrrrrrrrrrrrrrrrrrrrrrrrrrr"/>
+        <phase duration="3"  state="yyyyyrrrrrrrrrryyyyyrrrrrrrryyyyyyrrryyyyyrrrrr"/>
+        <phase duration="2"  state="rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"/>
         <phase duration="50" state="GGGGGrrrrrrrrrrGGGGGGGGGGGGrrrrrrrrGGrrrrrrGrGG"/>
-        <phase duration="3"  state="yyyyyrrrrrrrrrrGGGyyGGGGGGGrrrrrrrryyrrrrrryryy"/>
-        <phase duration="1"  state="rrrrrrrrrrrrrrrGGGrrGGGGGGGrrrrrrrrrrrrrrrrrrrr"/>
+        <phase duration="3"  state="yyyyyrrrrrrrrrryyyyyyyyyyyyrrrrrrrryyrrrrrryryy"/>
+        <phase duration="2"  state="rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr"/>
     </tlLogic>
 
     <junction id="1026680147" type="dead_end" x="1746.70" y="2720.32" incLanes="" intLanes="" shape="1747.92,2721.36 1745.48,2719.28"/>
