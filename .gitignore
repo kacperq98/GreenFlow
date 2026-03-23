@@ -3,6 +3,7 @@ venv/
 
 # IDE
 .vscode/
+.idea/
 
 # Logs and temporary files
 *.log
@@ -23,3 +24,10 @@ simulation/e1*.xml
 
 #Models file (should be deleted to push best model to the repository)
 models
+
+# Logs directory
+logs/
+
+# Python cache
+__pycache__/
+*.pyc
