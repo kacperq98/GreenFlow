@@ -4,6 +4,8 @@
 
 GreenFlow to projekt wykorzystujący sztuczną inteligencję do optymalizacji sterowania sygnalizacją świetlną. System uczy się na podstawie symulacji ruchu drogowego, jak najlepiej sterować światłami, aby zminimalizować czas oczekiwania pojazdów na skrzyżowaniach.
 
+[Link do prezentacji](https://www.canva.com/design/DAHEzZB8Dbg/wapuzOjh5AXAJWEdI35Drg/edit?utm_content=DAHEzZB8Dbg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 ---
 
 ## O projekcie
