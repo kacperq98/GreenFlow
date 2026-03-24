@@ -146,7 +146,7 @@ def main():
     study = optuna.create_study(direction='maximize', pruner=pruner)
     
     try:
-        study.optimize(objective, n_trials=20, timeout=7200)
+        study.optimize(objective, n_trials=30, timeout=7200)
     except KeyboardInterrupt:
         pass
 
