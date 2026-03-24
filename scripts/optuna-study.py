@@ -3,6 +3,7 @@ import sys
 import optuna
 import logging
 import json
+import numpy as np
 from stable_baselines3 import PPO
 from stable_baselines3.common.callbacks import EvalCallback
 from sumo_rl import SumoEnvironment
@@ -12,6 +13,50 @@ logging.basicConfig(level=logging.INFO,
                     handlers=[
                         logging.FileHandler("optuna-study.log"),
                         logging.StreamHandler()])
+
+PT_VEHICLE_TYPES = {'bus', 'tram_gdansk'}
+PT_WAIT_CAP = 60.0
+PT_WAIT_MULTIPLIER = 2.0
+PT_WAIT_NORM = 100.0
+WAIT_NORM = 100.0
+
+def baltycka_reward_fn(ts) -> float:
+    # 1. Waiting time difference between current and previous step
+    current_wait = sum(ts.get_accumulated_waiting_time_per_lane())
+    last_wait = getattr(ts, '_last_wait', current_wait)
+    waiting_time_delta = np.clip((last_wait - current_wait) / WAIT_NORM, -1, 1)
+    ts._last_wait = current_wait
+
+    # 2. Quadratic queue penalty (normalized by number of lanes)
+    queues = ts.get_lanes_queue()
+    queue_penalty = -sum(q ** 2 for q in queues) / len(queues)
+
+    # 3. Average vehicle speed (already normalized by sumo-rl)
+    avg_speed = ts.get_average_speed()
+
+    # 4. Public transport priority
+    pt_waits = [
+        min(ts.sumo.vehicle.getAccumulatedWaitingTime(veh_id), PT_WAIT_CAP)
+        for veh_id in ts._get_veh_list()
+        if ts.sumo.vehicle.getTypeID(veh_id) in PT_VEHICLE_TYPES
+    ]
+    pt_penalty = -np.mean(pt_waits) * PT_WAIT_MULTIPLIER / PT_WAIT_NORM if pt_waits else 0.0
+
+    # 5. Phase switching penalty
+    switch_penalty = 0.0
+    now = ts.env.sim_step
+    if getattr(ts, '_last_phase', None) != ts.green_phase:
+        dt = now - getattr(ts, '_last_switch_time', now)
+        switch_penalty = -1.0 / (dt + 1)
+        ts._last_switch_time = now
+    ts._last_phase = ts.green_phase
+
+    return (
+        0.30 * waiting_time_delta +
+        0.25 * queue_penalty +
+        0.20 * avg_speed +
+        0.15 * pt_penalty +
+        0.10 * switch_penalty)
 
 def environment_setup():
     logging.info("Setting up SUMO environment.")
@@ -25,7 +70,7 @@ def environment_setup():
             "../simulation/demand/truck.rou.xml")
 
     env = SumoEnvironment(
-        net_file='../simulation/network/osm.net.xml',  # Net file
+        net_file='../simulation/network/osm-rl-agent.net.xml',  # Net file
         route_file=route_files,
         out_csv_name='../models/optuna_ppo',
         additional_sumo_cmd="--collision.action remove --ignore-route-errors ",
@@ -33,7 +78,7 @@ def environment_setup():
         ts_ids =['Glowny_wezel'],
         use_gui=False,
         num_seconds=3600,
-        reward_fn='diff-waiting-time')
+        reward_fn=baltycka_reward_fn)
     logging.info("SUMO environment created.")
     return env
 
