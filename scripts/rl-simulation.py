@@ -6,6 +6,7 @@ setup_sumo_home()
 
 from stable_baselines3 import PPO
 from stable_baselines3.common.callbacks import EvalCallback
+from stable_baselines3.common.env_checker import check_env
 from sumo_rl import SumoEnvironment, env
 
 # Constants for reward function
@@ -173,6 +174,7 @@ def evaluate_model(eval_env):
 def main():
     logging.info("--- Starting RL Simulation ---")
     training_env = environment_setup()
+    check_env(training_env, warn=True)
     eval_env = environment_setup()
     model = create_model(training_env)
 
