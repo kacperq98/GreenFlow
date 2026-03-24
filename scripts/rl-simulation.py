@@ -1,3 +1,4 @@
+import argparse
 import logging
 import json
 import numpy as np
@@ -25,9 +26,9 @@ logging.basicConfig(level=logging.INFO,
                         logging.StreamHandler()
                     ])
 
-#sumo-rl documentation: https://lucasalegre.github.io/sumo-rl/
+# sumo-rl documentation: https://lucasalegre.github.io/sumo-rl/
 
-def baltycka_reward_fn(ts) -> float:
+def baltycka_reward_fn(ts):
     # 1. Waiting time difference between current and previous step
     current_wait = sum(ts.get_accumulated_waiting_time_per_lane())
     last_wait = getattr(ts, '_last_wait', current_wait)
@@ -66,8 +67,7 @@ def baltycka_reward_fn(ts) -> float:
         0.10 * switch_penalty
     )
 
-
-def environment_setup():
+def environment_setup(use_gui=False):
     logging.info("Setting up SUMO environment.")
     route_files = (
             "../simulation/demand/car_ev.rou.xml,"
@@ -85,7 +85,7 @@ def environment_setup():
         additional_sumo_cmd="--collision.action remove --ignore-route-errors ",
         single_agent=True,
         ts_ids =['Glowny_wezel'],
-        use_gui=False,
+        use_gui=use_gui,
         num_seconds=3600,
         reward_fn=baltycka_reward_fn)
     logging.info("SUMO environment created.")
@@ -145,15 +145,14 @@ def create_model(env):
     logging.info("PPO model initialized.")
     return model
 
-def model_learn(model, callback=None):
+def model_learn(model, callback=None, total_timesteps=200_000):
     logging.info("Starting model training.")
-    model.learn(total_timesteps=200_000, callback=callback)
+    model.learn(total_timesteps=total_timesteps, callback=callback)
     logging.info("Training finished!")
 
-
-def model_save(model):
-    model.save("../models/ppo_galeria_baltycka_v1")
-    logging.info("Model saved to ../models/ppo_galeria_baltycka_v1")
+def model_save(model, model_name):
+    model.save(f"../models/{model_name}")
+    logging.info(f"Model saved to ../models/{model_name}")
 
 def close_environment(env):
     env.close()
@@ -171,20 +170,28 @@ def evaluate_model(eval_env):
     logging.info("Evaluation callback created.")
     return eval_callback, eval_env
 
-def main():
+def main(model_name, total_timesteps, use_gui):
     logging.info("--- Starting RL Simulation ---")
-    training_env = environment_setup()
+    training_env = environment_setup(use_gui=use_gui)
     check_env(training_env, warn=True)
     eval_env = environment_setup()
     model = create_model(training_env)
 
     eval_callback, eval_env = evaluate_model(eval_env)
-    model_learn(model, callback=eval_callback)
-    
-    model_save(model)
+    model_learn(model, callback=eval_callback, total_timesteps=total_timesteps)
+
+    model_save(model, model_name)
     close_environment(training_env)
     close_environment(eval_env)
     logging.info("--- RL Simulation Finished ---")
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description='Train PPO agent on Baltycka intersection')
+    parser.add_argument('--model-name', type=str, default='ppo_galeria_baltycka_v1',
+                        help='Name of the saved model file (default: ppo_galeria_baltycka_v1)')
+    parser.add_argument('--timesteps', type=int, default=200_000,
+                        help='Total training timesteps (default: 200_000)')
+    parser.add_argument('--gui', action='store_true', help='Run simulation with SUMO GUI')
+    args = parser.parse_args()
+
+    main(model_name=args.model_name, total_timesteps=args.timesteps, use_gui=args.gui)
