@@ -1,10 +1,12 @@
-import os
-import sys
 import logging
 import json
 import numpy as np
+from utils import setup_sumo_home
+setup_sumo_home()
+
 from stable_baselines3 import PPO
 from stable_baselines3.common.callbacks import EvalCallback
+from stable_baselines3.common.env_checker import check_env
 from sumo_rl import SumoEnvironment, env
 
 # Constants for reward function
@@ -24,15 +26,6 @@ logging.basicConfig(level=logging.INFO,
                     ])
 
 #sumo-rl documentation: https://lucasalegre.github.io/sumo-rl/
-
-def check_sumo_home():
-    if 'SUMO_HOME' in os.environ:
-        tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
-        sys.path.append(tools)
-        logging.info("SUMO_HOME found and tools added to path.")
-    else:
-        logging.error("SUMO_HOME environment variable not set. Please set it to your SUMO installation directory.")
-        sys.exit("Error: SUMO_HOME environment variable not set. Please set it to your SUMO installation directory.")
 
 def baltycka_reward_fn(ts) -> float:
     # 1. Waiting time difference between current and previous step
@@ -70,7 +63,9 @@ def baltycka_reward_fn(ts) -> float:
         0.25 * queue_penalty +
         0.20 * avg_speed +
         0.15 * pt_penalty +
-        0.10 * switch_penalty)
+        0.10 * switch_penalty
+    )
+
 
 def environment_setup():
     logging.info("Setting up SUMO environment.")
@@ -170,7 +165,7 @@ def evaluate_model(eval_env):
             eval_env, 
             best_model_save_path='../models/best_model/',
             log_path='../models/ppo_traffic_tensorboard/eval_logs/', 
-            eval_freq=10_000, 
+            eval_freq=10_000,
             deterministic=True, 
             render=False)
     logging.info("Evaluation callback created.")
@@ -178,8 +173,8 @@ def evaluate_model(eval_env):
 
 def main():
     logging.info("--- Starting RL Simulation ---")
-    check_sumo_home()
     training_env = environment_setup()
+    check_env(training_env, warn=True)
     eval_env = environment_setup()
     model = create_model(training_env)
 
