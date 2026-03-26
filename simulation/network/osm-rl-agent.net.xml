@@ -630,7 +630,7 @@
         <lane id="1362017842.95_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="31.23" shape="2117.16,1661.46 2146.08,1673.23" changeLeft="authority">
             <param key="origId" value="1362017842"/>
         </lane>
-        <lane id="1362017842.95_2" index="2" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="31.23" shape="2115.95,1664.42 2144.88,1676.20" changeLeft="authority" changeRight="authority">
+        <lane id="1362017842.95_2" index="2" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="31.23" shape="2115.95,1664.42 2144.88,1676.20" changeLeft="all" changeRight="all">
             <param key="origId" value="1362017842"/>
         </lane>
         <param key="ref" value="472"/>
@@ -648,10 +648,10 @@
         <param key="ref" value="472"/>
     </edge>
     <edge id="1362019276" from="12610341666" to="1732884293" name="Aleja Żołnierzy Wyklętych" priority="11" type="highway.secondary" spreadType="center" shape="2689.28,2238.47 2638.36,2169.07 2609.66,2128.87">
-        <lane id="1362019276_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="136.19" shape="2687.99,2239.42 2637.06,2170.01 2607.94,2129.22" changeLeft="authority" changeRight="authority">
+        <lane id="1362019276_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="136.19" shape="2687.99,2239.42 2637.06,2170.01 2607.94,2129.22" changeLeft="authority" changeRight="all">
             <param key="origId" value="1362019276 1362019278"/>
         </lane>
-        <lane id="1362019276_1" index="1" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="136.19" shape="2690.57,2237.52 2639.66,2168.13 2610.55,2127.36" changeLeft="authority" changeRight="authority">
+        <lane id="1362019276_1" index="1" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="136.19" shape="2690.57,2237.52 2639.66,2168.13 2610.55,2127.36" changeLeft="all" changeRight="authority">
             <param key="origId" value="1362019276 1362019278"/>
         </lane>
     </edge>
@@ -1182,7 +1182,7 @@
         <param key="ref" value="472"/>
     </edge>
     <edge id="430532793.85.34.10" from="J12" to="4096038404" name="Aleja Żołnierzy Wyklętych" priority="12" type="highway.primary" spreadType="center">
-        <lane id="430532793.85.34.10_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="14.89" shape="1916.47,1606.51 1902.58,1601.16" changeLeft="authority" changeRight="authority">
+        <lane id="430532793.85.34.10_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="14.89" shape="1916.47,1606.51 1902.58,1601.16" changeLeft="all" changeRight="all">
             <param key="origId" value="430532793"/>
         </lane>
         <lane id="430532793.85.34.10_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="14.89" shape="1917.62,1603.53 1903.73,1598.17" changeRight="authority">
