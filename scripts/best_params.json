@@ -1,0 +1,8 @@
+{
+    "learning_rate": 0.0005373682439834764,
+    "n_steps": 2048,
+    "gamma": 0.94919692706533,
+    "ent_coef": 0.14095277183870186,
+    "batch_size": 64,
+    "net_arch": "medium"
+}
