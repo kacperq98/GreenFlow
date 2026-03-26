@@ -1,12 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-03-26T19:57:47.280194+01:00 by Eclipse SUMO netedit 1.26.0
+<!-- generated on 2026-03-26 22:06:09.052973 by Eclipse SUMO randomTrips.py v1_26_0+0000-fa7df22d7f1
+<configuration>
+    <net-file value="network\osm.net.xml"/>
+    <additional-files value="demand\vtypes.add.xml"/>
+    <output-trip-file value="demand\motorcycle.trips.xml"/>
+    <route-file value="demand\motorcycle.rou.xml"/>
+    <prefix value="motorcycle_"/>
+    <trip-attributes value="type='motorcycle'"/>
+    <lanes value="True"/>
+    <fringe-factor value="5.0"/>
+    <edge-permission value="motorcycle"/>
+    <period value="120.0"/>
+    <poisson value="True"/>
+</configuration>
+-->
+
+<!-- generated on 2026-03-26T22:06:08.941243+01:00 by Eclipse SUMO duarouter 1.26.0
+<duarouterConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="network\osm.net.xml"/>
+        <additional-files value="demand\vtypes.add.xml"/>
+        <route-files value="demand\motorcycle.trips.xml"/>
+    </input>
+
+    <output>
+        <output-file value="demand\motorcycle.rou.xml"/>
+        <alternatives-output value="NUL"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="3600.0"/>
+    </time>
+
+    <report>
+        <no-warnings value="true"/>
+        <ignore-errors value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+</duarouterConfiguration>
 -->
 
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
-    <!-- VTypes -->
     <vType id="motorcycle" length="2.20" maxSpeed="13.89" vClass="motorcycle" emissionClass="HBEFA3/PC_G_EU3" guiShape="motorcycle" width="0.90" color="yellow" lcStrategic="0.5" lcCooperative="1.2" lcSpeedGain="3.8" lcAssertive="1.5" accel="5.0" decel="7.0" sigma="0.7"/>
-    <!-- Vehicles, persons and containers (sorted by depart) -->
     <vehicle id="motorcycle_0" type="motorcycle" depart="0.00">
         <route edges="287311357#0 27348585#0 61316915 187938712 287311363#0 1348067247 1348067246#0 287311364 27476746 291941452 291941449 1232964862 27476764#0 -1348067248"/>
     </vehicle>
@@ -37,6 +76,9 @@
     <vehicle id="motorcycle_9" type="motorcycle" depart="1080.00">
         <route edges="61316958 236818221#0 224821293#2 1232799370 1232799371#2 1232799371#4 277203712 236809165"/>
     </vehicle>
+    <vehicle id="motorcycle_10" type="motorcycle" depart="1200.00">
+        <route edges="29114711#0.184 1362017843 1362017842.95 313992354#0 313992354#1 1362017841 313992351#0 287311357#0 432309716#0 287956206#2 1451328237#0 E1 1323631883 430532793.85 430532793.85.34 430532793.85.34.10 -407552210#1"/>
+    </vehicle>
     <vehicle id="motorcycle_11" type="motorcycle" depart="1320.00">
         <route edges="161297934 1362019276 29092803 942711932#0 61316958 236818220#0 287956206#2 1271126935 187938713#0 287311357#0 27348585#0 61316915 287956205 25126523 1362019277 1362020490"/>
     </vehicle>
@@ -49,17 +91,29 @@
     <vehicle id="motorcycle_14" type="motorcycle" depart="1680.00">
         <route edges="61316915 187938712 287311363#0"/>
     </vehicle>
+    <vehicle id="motorcycle_15" type="motorcycle" depart="1800.00">
+        <route edges="161297934 1362019276 29092803 942711932#0 61316958 236818220#0 287956206#2 1451328237#0 E1 1323631883 430532793.85 430532793.85.34 430532793.85.34.10 -407552210#1"/>
+    </vehicle>
     <vehicle id="motorcycle_16" type="motorcycle" depart="1920.00">
         <route edges="200568455#0 227216231#0 236818215 236818214 187938710#0 27348585#0 61316915 287956205 25126523 1362019277"/>
     </vehicle>
     <vehicle id="motorcycle_17" type="motorcycle" depart="2040.00">
         <route edges="161297934 1362019276 29092803 942711932#0 61316958"/>
     </vehicle>
+    <vehicle id="motorcycle_18" type="motorcycle" depart="2160.00">
+        <route edges="1323631883 430532793.85 430532793.85.34 430532793.85.34.10 -407552210#1"/>
+    </vehicle>
+    <vehicle id="motorcycle_19" type="motorcycle" depart="2280.00">
+        <route edges="961539471 961539472 236811148 236811149#0 1451328237#0 E1 1323631883 430532793.85 430532793.85.34 430532793.85.34.10 430532795"/>
+    </vehicle>
     <vehicle id="motorcycle_20" type="motorcycle" depart="2400.00">
         <route edges="29114711#0.184 1362017843 1362017842.95 313992354#0 313992354#1 1362017841 313992351#0 287311357#0 169400609#0 224821293#2 1232799370 1232799371#2 1232799371#4 277203712 236809165"/>
     </vehicle>
     <vehicle id="motorcycle_21" type="motorcycle" depart="2520.00">
         <route edges="942711932#0 61316958 236818220#0 287956206#2 1271126935 187938713#0 287311357#0 27348585#0 61316915 287956205 25126523 1362019277"/>
+    </vehicle>
+    <vehicle id="motorcycle_22" type="motorcycle" depart="2640.00">
+        <route edges="961539471 961539472 236811148 236811149#0 1451328237#0 E1 1323631883 430532793.85 430532793.85.34 430532793.85.34.10 430532795"/>
     </vehicle>
     <vehicle id="motorcycle_23" type="motorcycle" depart="2760.00">
         <route edges="200568455#0 227216231#0 236818215 236818214 161297931#0 432309716#0 287956206#2 1271126935 169400610#0 224821292#0 1147624737#0"/>
@@ -69,6 +123,9 @@
     </vehicle>
     <vehicle id="motorcycle_25" type="motorcycle" depart="3000.00">
         <route edges="236818215 236818214 187938710#0 169400609#0 224821293#2 1232799370 1232799371#2 1232799371#4 277203712 236809165"/>
+    </vehicle>
+    <vehicle id="motorcycle_26" type="motorcycle" depart="3120.00">
+        <route edges="187938710#0 27348585#0 61316915 187938712 287311363#0 1348067247 1348067246#0 287311364 27476746 291941452 942711943 1347887395 255904385#0 61316958 236818220#0 287956206#2 1451328237#0 E1 1323631883 430532793.85 430532793.85.34 430532793.85.34.10 430532795"/>
     </vehicle>
     <vehicle id="motorcycle_27" type="motorcycle" depart="3240.00">
         <route edges="236811148 236811149#0 1271126935 187938713#0 287311357#0 27348585#0 61316915 187938712 287311363#0 1348067247 1348067246#0"/>

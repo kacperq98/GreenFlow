@@ -1,12 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-03-26T19:57:47.284977+01:00 by Eclipse SUMO netedit 1.26.0
+<!-- generated on 2026-03-26 22:06:05.861006 by Eclipse SUMO randomTrips.py v1_26_0+0000-fa7df22d7f1
+<configuration>
+    <net-file value="network\osm.net.xml"/>
+    <additional-files value="demand\vtypes.add.xml"/>
+    <output-trip-file value="demand\truck.trips.xml"/>
+    <route-file value="demand\truck.rou.xml"/>
+    <prefix value="truck_"/>
+    <trip-attributes value="type='truck'"/>
+    <lanes value="True"/>
+    <fringe-factor value="5.0"/>
+    <edge-permission value="truck"/>
+    <period value="1800.0"/>
+    <poisson value="True"/>
+</configuration>
+-->
+
+<!-- generated on 2026-03-26T22:06:05.751424+01:00 by Eclipse SUMO duarouter 1.26.0
+<duarouterConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="network\osm.net.xml"/>
+        <additional-files value="demand\vtypes.add.xml"/>
+        <route-files value="demand\truck.trips.xml"/>
+    </input>
+
+    <output>
+        <output-file value="demand\truck.rou.xml"/>
+        <alternatives-output value="NUL"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="3600.0"/>
+    </time>
+
+    <report>
+        <no-warnings value="true"/>
+        <ignore-errors value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+</duarouterConfiguration>
 -->
 
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
-    <!-- VTypes -->
     <vType id="truck" length="12.00" maxSpeed="13.89" vClass="truck" emissionClass="HBEFA3/HDV_D_EU4" guiShape="truck" color="blue" lcStrategic="0.5" lcCooperative="1" lcSpeedGain="3.8" lcAssertive="1.5" accel="1.2" decel="4.0" sigma="0.5"/>
-    <!-- Vehicles, persons and containers (sorted by depart) -->
     <vehicle id="truck_0" type="truck" depart="0.00">
         <route edges="287311357#0 27348585#0 61316915 187938712 287311363#0 1348067247 1348067246#0 287311364 27476746 291941452 291941449 1232964862 27476764#0 -1348067248"/>
     </vehicle>
