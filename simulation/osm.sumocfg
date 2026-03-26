@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-03-20T10:04:37.885850+01:00 by Eclipse SUMO sumo 1.26.0
+<!-- generated on 2026-03-26T19:57:47.292337+01:00 by Eclipse SUMO sumo 1.26.0
 -->
 
 <sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
@@ -18,12 +18,14 @@
         <stop-output value="results/reference_results/stopinfos.xml"/>
         <statistic-output value="results/reference_results/stats.xml"/>
     </output>
-    <report>
-        <duration-log.statistics value="true"/>
-    </report>
+
     <time>
         <begin value="0"/>
         <end value="3600"/>
     </time>
+
+    <report>
+        <duration-log.statistics value="true"/>
+    </report>
 
 </sumoConfiguration>
